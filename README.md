@@ -1,19 +1,19 @@
 # Teste do Target Sistemas 
 
-Esse projeto foi desenvolvido como um testo para o processo seletivo de desenvolvedor flutter da Target Sistemas.
+Este projeto foi desenvolvido como um teste para o processo seletivo de desenvolvedor Flutter na Target Sistemas.
 
-O projeto cumpre as diretrizes e requisitos enviado no e-mail e presentes no arquivo prova_flutter.pdf.
+O projeto atende às diretrizes e requisitos enviados por e-mail, conforme detalhados no arquivo 'prova_flutter.pdf'.
 
 ## como correr
 1. Clone o repositório;
 2. Abra o terminal na pasta do projeto e execute o comando ```flutter pub get``` para instalar as dependências;
 3. Execute a aplicação com o comando ```flutter run```.
 
-O APP usa a API DummyJSON, uma API fake que permite simular muitas coisas, uma delas e a autenticação.
+O aplicativo utiliza a API DummyJSON, uma API fictícia que possibilita simular diversas funcionalidades, incluindo a autenticação.
 
-Essa autenticação é feita com uma simples requisição POST no endpoint https://dummyjson.com/auth/login.
+O processo de autenticação é realizado por meio de uma requisição POST simples no endpoint https://dummyjson.com/auth/login.
 
-Esse post deve ter um JSON body no seguinte formato:
+Essa requisição deve ter um JSON no body no seguinte formato:
 
     {
         username: 'username',
@@ -46,16 +46,3 @@ Os Testes podem ser encontrados no diretorio test/.
 
 ## Autor
 Althierfson Tullio
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
