@@ -88,7 +88,7 @@ class _EditNotePageState extends State<EditNotePage> {
                                           FocusScope.of(context)
                                               .requestFocus(_focusNode);
 
-                                          _store.removeNote(index);
+                                          _requestRemovalConfirmation(index);
                                         },
                                       )),
                             );
@@ -140,5 +140,39 @@ class _EditNotePageState extends State<EditNotePage> {
         }),
       ),
     );
+  }
+
+  void _requestRemovalConfirmation(int index) {
+    showDialog(
+        context: context,
+        builder: (_) => AlertDialog(
+              content: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    const Text(
+                      "Deseja realmente apagar essa nota?",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 10.0,
+                    ),
+                    Text(_store.notes[index])
+                  ],
+                ),
+              ),
+              actions: [
+                TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Text("Não")),
+                TextButton(
+                    onPressed: () {
+                      _store.removeNote(index);
+                      Navigator.pop(context);
+                    },
+                    child: const Text("Sim"))
+              ],
+            ));
   }
 }
