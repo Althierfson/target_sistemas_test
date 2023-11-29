@@ -40,3 +40,13 @@ class CredentialStandardsFailure extends Failure {
   @override
   List<Object?> get props => [userNameErrors, passwordErrors];
 }
+
+class SaveNoteFailure extends Failure {
+  @override
+  String get message => "Não foi possivel savar os dados.";
+}
+
+class FetchNoteFailure extends Failure {
+  @override
+  String get message => "Não foi possivel carregar os dados.";
+}

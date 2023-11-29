@@ -23,6 +23,8 @@ dependencies:
   flutter_mobx: ^2.2.0
   mobx_codegen: ^2.4.0
   get_it: ^7.6.4
+  webview_flutter: ^4.4.2
+  url_launcher: ^6.2.1
 
 
 dev_dependencies:

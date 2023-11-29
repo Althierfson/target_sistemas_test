@@ -28,7 +28,7 @@ void main() {
 
   group("function loginWithUseNameAndPassword", () {
     test(
-        "Must return a LoginSucess when both remote and local return successes",
+        "Should return a LoginSucess when both remote and local return successes",
         () async {
       when(dataSourceRemote.loginWithUserNameAndPassword(
               userName: "userName", password: "password"))
@@ -43,7 +43,7 @@ void main() {
       expect(result, Right(LoginSuccess()));
     });
 
-    test("Must return a LoginFailure when the remote fails", () async {
+    test("Should return a LoginFailure when the remote fails", () async {
       when(dataSourceRemote.loginWithUserNameAndPassword(
               userName: "userName", password: "password"))
           .thenThrow(LoginFailure());
@@ -56,7 +56,7 @@ void main() {
       expect(result, Left(LoginFailure()));
     });
 
-    test("Must return a LoginFailure when the local fails", () async {
+    test("Should return a LoginFailure when the local fails", () async {
       when(dataSourceRemote.loginWithUserNameAndPassword(
               userName: "userName", password: "password"))
           .thenAnswer((_) async => getUserModel());
@@ -69,7 +69,7 @@ void main() {
       expect(result, Left(LoginFailure()));
     });
 
-    test("Must return a UnexpectedError when some enexpected error happen",
+    test("Should return a UnexpectedError when some enexpected error happen",
         () async {
       when(dataSourceRemote.loginWithUserNameAndPassword(
               userName: "userName", password: "password"))

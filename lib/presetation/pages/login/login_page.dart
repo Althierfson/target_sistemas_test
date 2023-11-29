@@ -44,7 +44,8 @@ class _LoginPageState extends State<LoginPage> {
       }),
       reaction((_) => _store.goToNextpage, (bool go) {
         if (go) {
-          Navigator.pushNamed(context, "/edit-note");
+          Navigator.pushNamedAndRemoveUntil(
+              context, "/edit-note", (route) => false);
         }
         _store.goToNextpage = false;
       })
@@ -124,7 +125,9 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     const Spacer(),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, "/privacy-policy");
+                      },
                       child: const Text(
                         "Política de Privacidade",
                         style: TextStyle(fontSize: 14, color: Colors.white),

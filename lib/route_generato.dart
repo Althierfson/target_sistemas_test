@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:target_sistemas_test/presetation/pages/core/privacy_policy_page.dart';
 import 'package:target_sistemas_test/presetation/pages/login/login_page.dart';
 import 'package:target_sistemas_test/presetation/pages/notes/edit_note_page.dart';
 
@@ -14,6 +15,8 @@ class RouteGenerato {
         return const LoginPage();
       case "/edit-note":
         return const EditNotePage();
+      case "/privacy-policy":
+        return const PrivacyPolicyPage();
       default:
         return _errorPage();
     }

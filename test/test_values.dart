@@ -20,3 +20,5 @@ User Function() getUserEntity = () => const User(
     gender: "female",
     image: "https://robohash.org/autquiaut.png?size=50x50&set=set1",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.FAKE");
+
+List<String> Function() getNotes = () => ["Note 1", "Note 2", "Note 3"];

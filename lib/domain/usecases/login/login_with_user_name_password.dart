@@ -12,7 +12,7 @@ class LoginWithUserNameAndPassword {
       {required String userName, required String password}) async {
     List<String>? userNameError;
     List<String>? passwordError;
-//! reformular os testes
+
     userNameError = _userNameIsOutOfFormat(userName);
     passwordError = _passwordIsOutOfFormat(password);
 
