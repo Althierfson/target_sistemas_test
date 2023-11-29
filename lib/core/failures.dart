@@ -22,7 +22,7 @@ class LoginFailure extends Failure {
 
 class InvalidCredentialsFailure extends Failure {
   @override
-  String get message => "Usuário ou Senha errada.";
+  String get message => "Usuário ou Senha icorretos.";
 }
 
 class CredentialStandardsFailure extends Failure {

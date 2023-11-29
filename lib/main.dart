@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:target_sistemas_test/container_injection.dart';
 import 'package:target_sistemas_test/route_generato.dart';
+import 'package:target_sistemas_test/theme.dart';
 
 /*
   O aplicativo utiliza a API DummyJSON, uma API fictícia que possibilita
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Target Sistemas Test',
       debugShowCheckedModeBanner: false,
+      theme: CustomTheme.theme,
       onGenerateRoute: it<RouteGenerato>().generateRoute,
       initialRoute: "/login",
     );

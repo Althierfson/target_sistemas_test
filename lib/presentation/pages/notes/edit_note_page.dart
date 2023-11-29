@@ -99,6 +99,8 @@ class _EditNotePageState extends State<EditNotePage> {
                           left: 80.0, top: 30.0, right: 80.0),
                       child: TextField(
                         controller: _textEditingController,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.black),
                         autofocus: true,
                         focusNode: _focusNode,
                         textAlign: TextAlign.center,

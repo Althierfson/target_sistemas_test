@@ -90,6 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                           title: "Senha",
                           icon: Icons.lock,
                           inputErrors: _store.passwordErrors,
+                          obscureText: true,
                           onChange: (value) {
                             _password = value;
                           });
