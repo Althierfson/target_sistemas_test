@@ -19,7 +19,7 @@ void main() {
     usecase = SaveNotes(repository: repository);
   });
 
-  test("Should return a list of String on right side", () async {
+  test("Should return a list of [String] on right side", () async {
     final list = getNotes();
     when(repository.saveNotes(list)).thenAnswer((_) async => Right(list));
 
@@ -28,7 +28,7 @@ void main() {
     expect(result, Right(list));
   });
 
-  test("Should return a SaveNoteFailure on Left side", () async {
+  test("Should return a [SaveNoteFailure] on Left side", () async {
     final list = getNotes();
     when(repository.saveNotes(list))
         .thenAnswer((_) async => Left(SaveNoteFailure()));

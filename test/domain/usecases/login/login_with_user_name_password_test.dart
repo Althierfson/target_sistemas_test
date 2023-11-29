@@ -22,7 +22,7 @@ void main() {
   group("input format tests", () {
     group("userName format", () {
       test(
-          "Must return a CredentialStandardsFailure on Left Side when the userName is empty",
+          "Must return a [CredentialStandardsFailure] on Left Side when the userName is empty",
           () async {
         final result = await usecase(userName: "", password: "password");
 
@@ -36,7 +36,7 @@ void main() {
       });
 
       test(
-          "Must return a CredentialStandardsFailure on Left Side when the userName has space at the end",
+          "Must return a [CredentialStandardsFailure] on Left Side when the userName has space at the end",
           () async {
         final result =
             await usecase(userName: "username ", password: "password");
@@ -52,7 +52,7 @@ void main() {
       });
 
       test(
-          "Must return a CredentialStandardsFailure on Left Side when the userName has more the 20 characters",
+          "Must return a [CredentialStandardsFailure] on Left Side when the userName has more the 20 characters",
           () async {
         final result = await usecase(
             userName: "usernameusernameusername", password: "password");
@@ -70,7 +70,7 @@ void main() {
 
     group("password format", () {
       test(
-          "Must return a CredentialStandardsFailure on Left Side when the password is empty",
+          "Must return a [CredentialStandardsFailure] on Left Side when the password is empty",
           () async {
         final result = await usecase(userName: "userName", password: "");
 
@@ -84,7 +84,7 @@ void main() {
       });
 
       test(
-          "Must return a CredentialStandardsFailure on Left Side when the password has space at the end",
+          "Must return a [CredentialStandardsFailure] on Left Side when the password has space at the end",
           () async {
         final result =
             await usecase(userName: "username", password: "password ");
@@ -100,7 +100,7 @@ void main() {
       });
 
       test(
-          "Must return a CredentialStandardsFailure on Left Side when the userName has more the 20 characters",
+          "Must return a [CredentialStandardsFailure] on Left Side when the userName has more the 20 characters",
           () async {
         final result = await usecase(
             userName: "username", password: "passwordpasswordpassword");
@@ -116,7 +116,7 @@ void main() {
       });
 
       test(
-          "Must return a CredentialStandardFailure on Left Side when the password is less than two characters long",
+          "Must return a [CredentialStandardFailure] on Left Side when the password is less than two characters long",
           () async {
         final result = await usecase(userName: "username", password: "p");
 
@@ -131,7 +131,7 @@ void main() {
       });
 
       test(
-          "Must return a CredentialStandardFailure on Left Side when the password contains special characters",
+          "Must return a [CredentialStandardFailure] on Left Side when the password contains special characters",
           () async {
         final result =
             await usecase(userName: "username", password: "password@123");

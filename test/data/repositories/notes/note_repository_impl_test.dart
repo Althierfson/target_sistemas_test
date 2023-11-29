@@ -20,7 +20,7 @@ void main() {
   });
 
   group("Function saveNotes", () {
-    test("Should return a list of String on the Right side", () async {
+    test("Should return a list of [String] on the Right side", () async {
       final list = getNotes();
       when(dataSourceLocal.saveNotes(list)).thenAnswer((_) async => list);
 
@@ -30,7 +30,7 @@ void main() {
     });
 
     test(
-        "Should return a SaveNoteFailure on the Left side when datasourcelocal throw a Failure",
+        "Should return a [SaveNoteFailure] on the Left side when datasourcelocal throw a [Failure]",
         () async {
       final list = getNotes();
       when(dataSourceLocal.saveNotes(list)).thenThrow(SaveNoteFailure());
@@ -41,7 +41,7 @@ void main() {
     });
 
     test(
-        "Should return a UnexpectedError on the Left side when datasourcelocal throw any Exception",
+        "Should return a [UnexpectedError] on the Left side when datasourcelocal throw any [Exception]",
         () async {
       final list = getNotes();
       when(dataSourceLocal.saveNotes(list)).thenThrow(Exception());
@@ -53,7 +53,7 @@ void main() {
   });
 
   group("Function fetchNotes", () {
-    test("Should return a list of String on the Right side", () async {
+    test("Should return a list of [String] on the Right side", () async {
       final list = getNotes();
       when(dataSourceLocal.fetchNotes()).thenAnswer((_) async => list);
 
@@ -63,7 +63,7 @@ void main() {
     });
 
     test(
-        "Should return a FetchNoteFailure on the Left side when datasourcelocal throw a Failure",
+        "Should return a [FetchNoteFailure] on the Left side when datasourcelocal throw a [Failure]",
         () async {
       when(dataSourceLocal.fetchNotes()).thenThrow(FetchNoteFailure());
 
@@ -73,7 +73,7 @@ void main() {
     });
 
     test(
-        "Should return a UnexpectedError on the Left side when datasourcelocal throw any Exception",
+        "Should return a [UnexpectedError] on the Left side when datasourcelocal throw any [Exception]",
         () async {
       when(dataSourceLocal.fetchNotes()).thenThrow(Exception());
 

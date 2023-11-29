@@ -60,7 +60,7 @@ void main() {
   });
 
   test(
-      "userName Errors and password Errors should have the errors coming from the use Case",
+      "userNameErrors and passwordErrors should have the errors coming from the usecase",
       () async {
     when(userCase(userName: "userName", password: "password")).thenAnswer(
         (_) async => Left(CredentialStandardsFailure(

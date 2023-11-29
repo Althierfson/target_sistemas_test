@@ -16,7 +16,7 @@ void main() {
   });
 
   group("Function saveNotes", () {
-    test("Should return String list when List is saved", () async {
+    test("Should return [String] list when List is saved", () async {
       final list = getNotes();
       when(shared.setStringList("_notesListKey", list))
           .thenAnswer((_) async => true);
@@ -27,7 +27,7 @@ void main() {
       expect(result, list);
     });
 
-    test("Should throw SaveNotesFailure when list is not saved", () async {
+    test("Should throw [SaveNotesFailure] when list is not saved", () async {
       final list = getNotes();
       when(shared.setStringList("_notesListKey", list)).thenThrow(Exception());
 
@@ -36,7 +36,7 @@ void main() {
   });
 
   group("Function fechNotes", () {
-    test("Should return String list", () async {
+    test("Should return [String] list", () async {
       final list = getNotes();
       when(shared.getStringList("_notesListKey")).thenReturn(list);
 
@@ -45,7 +45,7 @@ void main() {
       expect(result, list);
     });
 
-    test("Should throw FetchNoteFailure when is not possible get list",
+    test("Should throw [FetchNoteFailure] when is not possible get list",
         () async {
       final list = getNotes();
       when(shared.getStringList("_notesListKey")).thenThrow(Exception());

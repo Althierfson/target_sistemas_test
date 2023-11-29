@@ -16,7 +16,7 @@ void main() {
     usecase = FetchNotes(repository: repository);
   });
 
-  test("Should return a list of String on right side", () async {
+  test("Should return a list of [String] on right side", () async {
     final list = getNotes();
     when(repository.fetchNotes()).thenAnswer((_) async => Right(list));
 
@@ -25,7 +25,7 @@ void main() {
     expect(result, Right(list));
   });
 
-  test("Should return a FetchNoteFailure  on Left side", () async {
+  test("Should return a [FetchNoteFailure]  on Left side", () async {
     when(repository.fetchNotes())
         .thenAnswer((_) async => Left(FetchNoteFailure()));
 

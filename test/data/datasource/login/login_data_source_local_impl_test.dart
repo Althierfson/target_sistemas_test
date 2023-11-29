@@ -34,7 +34,7 @@ void main() {
       expect(result, LoggedinUserSaved());
     });
 
-    test("Should throw [LoginFailure] when UserModel is not saved", () async {
+    test("Should throw [LoginFailure] when [UserModel] is not saved", () async {
       final userModelTest = getUserModel();
       when(shared.setString(
               "_loggedinUserKey", jsonEncode(userModelTest.toJson())))
