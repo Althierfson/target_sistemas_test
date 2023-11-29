@@ -3,8 +3,8 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx/mobx.dart';
 import 'package:target_sistemas_test/container_injection.dart';
 import 'package:target_sistemas_test/custom_colors.dart';
-import 'package:target_sistemas_test/presetation/mobx/login/login_mobx.dart';
-import 'package:target_sistemas_test/presetation/widgets/login_text_field.dart';
+import 'package:target_sistemas_test/presentation/mobx/login/login_store.dart';
+import 'package:target_sistemas_test/presentation/widgets/login_text_field.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

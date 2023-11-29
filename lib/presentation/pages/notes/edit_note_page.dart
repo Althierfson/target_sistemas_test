@@ -3,8 +3,8 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx/mobx.dart';
 import 'package:target_sistemas_test/container_injection.dart';
 import 'package:target_sistemas_test/custom_colors.dart';
-import 'package:target_sistemas_test/presetation/mobx/notes/notes_store.dart';
-import 'package:target_sistemas_test/presetation/widgets/note_tile.dart';
+import 'package:target_sistemas_test/presentation/mobx/notes/notes_store.dart';
+import 'package:target_sistemas_test/presentation/widgets/note_tile.dart';
 
 class EditNotePage extends StatefulWidget {
   const EditNotePage({super.key});

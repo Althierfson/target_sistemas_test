@@ -24,24 +24,28 @@ abstract class _NotesStore with Store {
   @action
   void updateNotes(String note) {
     if (note.isEmpty) {
-      error = "Não é possivel adicionar um valor vaziu.";
+      error = "Não é possivel adicionar um valor vazio.";
     } else {
+      List<String> newList = [];
+      newList.addAll(notes);
       if (noteSelected == null) {
-        notes.add(note);
+        newList.add(note);
       } else {
-        notes[noteSelected!] = note;
+        newList[noteSelected!] = note;
         noteSelected = null;
       }
 
-      saveNotes(notes).then((value) => value.fold(
+      saveNotes(newList).then((value) => value.fold(
           (failure) => error = failure.message, (success) => notes = success));
     }
   }
 
   @action
   void removeNote(int index) {
-    notes.removeAt(index);
-    saveNotes(notes).then((value) => value.fold(
+    List<String> newList = [];
+    newList.addAll(notes);
+    newList.removeAt(index);
+    saveNotes(newList).then((value) => value.fold(
         (failure) => error = failure.message, (success) => notes = success));
   }
 

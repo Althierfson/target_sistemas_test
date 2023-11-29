@@ -14,8 +14,8 @@ import 'package:target_sistemas_test/domain/repositories/notes/notes_repository.
 import 'package:target_sistemas_test/domain/usecases/login/login_with_user_name_password.dart';
 import 'package:target_sistemas_test/domain/usecases/notes/fetch_notes.dart';
 import 'package:target_sistemas_test/domain/usecases/notes/save_notes.dart';
-import 'package:target_sistemas_test/presetation/mobx/login/login_mobx.dart';
-import 'package:target_sistemas_test/presetation/mobx/notes/notes_store.dart';
+import 'package:target_sistemas_test/presentation/mobx/login/login_store.dart';
+import 'package:target_sistemas_test/presentation/mobx/notes/notes_store.dart';
 import 'package:target_sistemas_test/route_generato.dart';
 
 GetIt it = GetIt.instance;

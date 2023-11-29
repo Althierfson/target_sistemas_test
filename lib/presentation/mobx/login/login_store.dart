@@ -2,7 +2,7 @@ import 'package:mobx/mobx.dart';
 import 'package:target_sistemas_test/core/failures.dart';
 import 'package:target_sistemas_test/domain/usecases/login/login_with_user_name_password.dart';
 
-part 'login_mobx.g.dart';
+part 'login_store.g.dart';
 
 class LoginStore = _LoginStore with _$LoginStore;
 
