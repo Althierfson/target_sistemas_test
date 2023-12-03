@@ -4,7 +4,7 @@ Este projeto foi desenvolvido como um teste para o processo seletivo de desenvol
 
 O projeto atende às diretrizes e requisitos enviados por e-mail, conforme detalhados no arquivo 'prova_flutter.pdf'.
 
-## como correr
+## como Executar
 1. Clone o repositório;
 2. Abra o terminal na pasta do projeto e execute o comando ```flutter pub get``` para instalar as dependências;
 3. Execute a aplicação com o comando ```flutter run```.
